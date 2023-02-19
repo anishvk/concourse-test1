@@ -1,0 +1,17 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: alpine
+
+inputs:
+  - name: spring-boot-service
+
+run:
+  path: sh
+  args:
+    - -c
+    - |
+      ls -la spring-boot-service
+      cat spring-boot-service/manifest.yml
